@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Reading List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="header"><div><p class="eyebrow">YOUR LITTLE LIBRARY</p><h1>My Reading List<span>.</span></h1><p class="subtitle">Keep track of the stories and ideas you want to explore.</p></div><div class="book-art" aria-hidden="true">▤</div></header>
+    <section class="stats"><article><span id="totalCount">0</span><small>Total books</small></article><article><span id="readingCount">0</span><small>Reading</small></article><article><span id="finishedCount">0</span><small>Finished</small></article></section>
+    <section class="panel">
+      <h2>Add a book</h2>
+      <form id="bookForm" class="book-form">
+        <label>Book title<input id="titleInput" required maxlength="100" placeholder="e.g. Atomic Habits"></label>
+        <label>Author<input id="authorInput" maxlength="80" placeholder="e.g. James Clear"></label>
+        <label>Status<select id="statusInput"><option value="Want to read">Want to read</option><option value="Reading">Reading</option><option value="Finished">Finished</option></select></label>
+        <button type="submit">+ Add book</button>
+      </form>
+    </section>
+    <section class="list-section">
+      <div class="list-heading"><div><h2>Your books</h2><p id="listSummary">Your next great read starts here.</p></div><input id="searchInput" type="search" placeholder="Search books…" aria-label="Search books"></div>
+      <div class="filters"><button class="filter active" data-status="All">All books</button><button class="filter" data-status="Want to read">Want to read</button><button class="filter" data-status="Reading">Reading</button><button class="filter" data-status="Finished">Finished</button></div>
+      <div id="bookList" class="book-list"></div>
+      <p id="emptyState" class="empty">Your list is empty for now. Add a book above to get started.</p>
+    </section>
+    <footer>Made for readers, one page at a time.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
